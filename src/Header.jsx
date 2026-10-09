@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <>
-      <h1>Ash Ketchum</h1>
+      <h1>Laqwanda Nettles</h1>
     </>
   );
 };

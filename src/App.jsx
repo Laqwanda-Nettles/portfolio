@@ -1,4 +1,5 @@
 import Header from "./Header";
+import About from "./About";
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -29,8 +30,19 @@ function Fortune() {
 
 function Footer() {
   let year = new Date().getFullYear();
-  return <p>&copy; {year} Ash Ketchum</p>;
+  return <p>&copy; {year} Laqwanda Nettles</p>;
 }
+
+const GitHubLink = () => {
+  let url = "https://github.com/Laqwanda-Nettles";
+  let label = "My GitHub";
+  return <a href={url}>{label}</a>;
+};
+
+const ProjectCount = () => {
+  let projects = ["Recipe App", "Coffee Shop", "Peace of Mind"];
+  return <p>I have shipped {projects.length} projects so far.</p>;
+};
 
 function App() {
   return (
@@ -38,6 +50,9 @@ function App() {
       <Header />
       <p>Pokémon trainer from Pallet Town.</p>
       <Fortune />
+      <About />
+      <GitHubLink />
+      <ProjectCount />
       <Footer />
     </div>
   );
