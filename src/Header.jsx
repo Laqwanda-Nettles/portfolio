@@ -1,7 +1,8 @@
 const Header = () => {
+  const name = "Laqwanda Nettles";
   return (
     <>
-      <h1>Laqwanda Nettles</h1>
+      <h1>{name}</h1>
     </>
   );
 };
