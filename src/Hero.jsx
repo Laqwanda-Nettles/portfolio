@@ -4,15 +4,19 @@ import "./hero.css";
 
 function Hero() {
   const photos = [
-    "photo-1542051841857-5f90071e7989",
-    "photo-1526481280693-3bfa7568e0f3",
-    "photo-1524413840807-0c3cb6fa808d",
-  ];
-
-  const description = [
-    "japanese city night view",
-    "tranditional japanese building with Mt. Fuji in the background",
-    "skura flower viewing under a bridge",
+    {
+      id: "photo-1542051841857-5f90071e7989",
+      description: "japanese city night view",
+    },
+    {
+      id: "photo-1526481280693-3bfa7568e0f3",
+      description:
+        "tranditional japanese building with Mt. Fuji in the background",
+    },
+    {
+      id: "photo-1524413840807-0c3cb6fa808d",
+      description: "skura flower viewing under a bridge",
+    },
   ];
 
   const [index, setIndex] = useState(0);
@@ -42,13 +46,14 @@ function Hero() {
     setSat(-100);
   };
 
+  const { id, description } = photos[index];
   const [src, alt] = heroPhoto({
-    photo: photos[index],
+    photo: id,
     width: 1200,
     height: 500,
     brightness: -30,
     sat,
-    description: description[index],
+    description: description,
   });
   return (
     <>
