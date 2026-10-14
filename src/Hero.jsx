@@ -42,14 +42,14 @@ function Hero() {
     setSat(-100);
   };
 
-  const [src, alt] = heroPhoto(
-    photos[index],
-    1200,
-    500,
-    -30,
+  const [src, alt] = heroPhoto({
+    photo: photos[index],
+    width: 1200,
+    height: 500,
+    brightness: -30,
     sat,
-    description[index],
-  );
+    description: description[index],
+  });
   return (
     <>
       <div className="hero">
