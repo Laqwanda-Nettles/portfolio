@@ -7,20 +7,24 @@ import ProjectCount from "./ProjectCount";
 import Hero from "./Hero";
 import ProjectCard from "./ProjectCard";
 import projects from "./projects";
+import Section from "./Section";
 
 function App() {
   return (
     <div className="container">
       <Header />
       <Hero />
-      <h2>What is your Fortune?</h2>
-      <Fortune />
+      <Section title="Today's Fortune">
+        <Fortune />
+      </Section>
       <About />
       <GitHubLink />
       <ProjectCount />
-      <ProjectCard project={projects[0]} />
-      <ProjectCard project={projects[1]} />
-      <ProjectCard project={projects[2]} />
+      <Section title="Projects">
+        <ProjectCard project={projects[0]} />
+        <ProjectCard project={projects[1]} />
+        <ProjectCard project={projects[2]} />
+      </Section>
       <Footer />
     </div>
   );
