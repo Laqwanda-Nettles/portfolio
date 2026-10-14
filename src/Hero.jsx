@@ -1,5 +1,6 @@
 import { useState } from "react";
 import heroPhoto from "./hero-photo.js";
+import PhotoControls from "./PhotoControls.jsx";
 import "./hero.css";
 
 function Hero() {
@@ -62,10 +63,12 @@ function Hero() {
         <h2>Full Stack Developer</h2>
       </div>
       <div>
-        <button onClick={previousPhoto}>Previous</button> &nbsp;
-        <button onClick={nextPhoto}>Next</button> &nbsp;
-        <button onClick={showColor}>Color</button> &nbsp;
-        <button onClick={showBlackAndWhite}>Black & White</button>
+        <PhotoControls
+          onNext={nextPhoto}
+          onPrevious={previousPhoto}
+          onColor={showColor}
+          onBlackAndWhite={showBlackAndWhite}
+        />
       </div>
     </>
   );

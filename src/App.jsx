@@ -4,24 +4,27 @@ import Fortune from "./Fortune";
 import Footer from "./Footer";
 import GitHubLink from "./GitHubLink";
 import ProjectCount from "./ProjectCount";
-import MentalHealthPortfolioCard from "./MentalHeathPortfolioCard";
-import CoffeeShopPortfolioCard from "./CoffeeShopPortfolioCard";
-import RecipeAppPortfolioCard from "./RecipeAppPortfolioCard";
 import Hero from "./Hero";
+import ProjectCard from "./ProjectCard";
+import projects from "./projects";
+import Section from "./Section";
 
 function App() {
   return (
     <div className="container">
       <Header />
       <Hero />
-      <p>Pokémon trainer from Pallet Town.</p>
-      <Fortune />
+      <Section title="Today's Fortune">
+        <Fortune />
+      </Section>
       <About />
       <GitHubLink />
       <ProjectCount />
-      <MentalHealthPortfolioCard />
-      <CoffeeShopPortfolioCard />
-      <RecipeAppPortfolioCard />
+      <Section title="Projects">
+        <ProjectCard project={projects[0]} />
+        <ProjectCard project={projects[1]} />
+        <ProjectCard project={projects[2]} />
+      </Section>
       <Footer />
     </div>
   );
