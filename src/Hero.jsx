@@ -15,7 +15,24 @@ function Hero() {
     "skura flower viewing under a bridge",
   ];
 
+  const [index, setIndex] = useState(0);
   const [sat, setSat] = useState(0);
+
+  const nextPhoto = () => {
+    if (index === photos.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
+  };
+
+  const previousPhoto = () => {
+    if (index === 0) {
+      setIndex(photos.length - 1);
+    } else {
+      setIndex(index - 1);
+    }
+  };
 
   const showColor = () => {
     setSat(0);
@@ -25,7 +42,14 @@ function Hero() {
     setSat(-100);
   };
 
-  const [src, alt] = heroPhoto(photos[0], 1200, 500, -30, sat, description[0]);
+  const [src, alt] = heroPhoto(
+    photos[index],
+    1200,
+    500,
+    -30,
+    sat,
+    description[index],
+  );
   return (
     <>
       <div className="hero">
@@ -33,6 +57,8 @@ function Hero() {
         <h2>Full Stack Developer</h2>
       </div>
       <div>
+        <button onClick={previousPhoto}>Previous</button> &nbsp;
+        <button onClick={nextPhoto}>Next</button> &nbsp;
         <button onClick={showColor}>Color</button> &nbsp;
         <button onClick={showBlackAndWhite}>Black & White</button>
       </div>
