@@ -7,11 +7,13 @@ import ProjectCount from "./ProjectCount";
 import MentalHealthPortfolioCard from "./MentalHeathPortfolioCard";
 import CoffeeShopPortfolioCard from "./CoffeeShopPortfolioCard";
 import RecipeAppPortfolioCard from "./RecipeAppPortfolioCard";
+import Hero from "./Hero";
 
 function App() {
   return (
     <div className="container">
       <Header />
+      <Hero />
       <p>Pokémon trainer from Pallet Town.</p>
       <Fortune />
       <About />
