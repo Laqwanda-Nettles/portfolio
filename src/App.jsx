@@ -4,10 +4,9 @@ import Fortune from "./Fortune";
 import Footer from "./Footer";
 import GitHubLink from "./GitHubLink";
 import ProjectCount from "./ProjectCount";
-import MentalHealthPortfolioCard from "./MentalHeathPortfolioCard";
-import CoffeeShopPortfolioCard from "./CoffeeShopPortfolioCard";
-import RecipeAppPortfolioCard from "./RecipeAppPortfolioCard";
 import Hero from "./Hero";
+import ProjectCard from "./ProjectCard";
+import projects from "./projects";
 
 function App() {
   return (
@@ -19,9 +18,9 @@ function App() {
       <About />
       <GitHubLink />
       <ProjectCount />
-      <MentalHealthPortfolioCard />
-      <CoffeeShopPortfolioCard />
-      <RecipeAppPortfolioCard />
+      <ProjectCard project={projects[0]} />
+      <ProjectCard project={projects[1]} />
+      <ProjectCard project={projects[2]} />
       <Footer />
     </div>
   );
