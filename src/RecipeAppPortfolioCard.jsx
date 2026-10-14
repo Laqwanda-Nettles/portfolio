@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 function RecipeAppPortfolioCard() {
+  const [likes, setLikes] = useState(0);
+
+  const addLike = () => {
+    setLikes(likes + 1);
+  };
+
   const name = "What's for Dinner?";
   const description =
     "This project was built using the techniques I've learned in class: API integration, object-oriented programming, and SCSS 7-1 architecture. It consists of three pages: landing, home, and about.";
@@ -11,6 +19,7 @@ function RecipeAppPortfolioCard() {
       <p>
         <a href={liveUrl}>See it live</a> · <a href={repoUrl}>Read the code</a>
       </p>
+      <button onClick={addLike}>Like {likes}</button>
     </article>
   );
 }

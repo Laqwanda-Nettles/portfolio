@@ -1,9 +1,17 @@
+import { useState } from "react";
+
 function CoffeeShopPortfolioCard() {
   const name = "Jazzed Up Coffee";
   const description =
     "This is a project to build a frontend for a coffee shop. The project is connected to my own created MongoDB database.";
   const liveUrl = "https://coffee-shop-frontend-seven.vercel.app/";
   const repoUrl = "https://github.com/Laqwanda-Nettles/coffee-shop-frontend";
+  const [likes, setLikes] = useState(0);
+
+  const addLike = () => {
+    setLikes(likes + 1);
+  };
+
   return (
     <article>
       <h2>{name}</h2>
@@ -11,6 +19,7 @@ function CoffeeShopPortfolioCard() {
       <p>
         <a href={liveUrl}>See it live</a> · <a href={repoUrl}>Read the code</a>
       </p>
+      <button onClick={addLike}>Like {likes}</button>
     </article>
   );
 }
