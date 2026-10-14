@@ -1,9 +1,9 @@
 function RecipeAppPortfolioCard() {
-  let name = "What's for Dinner?";
-  let description =
+  const name = "What's for Dinner?";
+  const description =
     "This project was built using the techniques I've learned in class: API integration, object-oriented programming, and SCSS 7-1 architecture. It consists of three pages: landing, home, and about.";
-  let liveUrl = "https://laqwanda-nettles.github.io/Recipe-App/";
-  let repoUrl = "https://github.com/Laqwanda-Nettles/Recipe-App";
+  const liveUrl = "https://laqwanda-nettles.github.io/Recipe-App/";
+  const repoUrl = "https://github.com/Laqwanda-Nettles/Recipe-App";
   return (
     <article>
       <h2>{name}</h2>
