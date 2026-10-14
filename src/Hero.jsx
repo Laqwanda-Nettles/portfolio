@@ -2,7 +2,7 @@ import heroPhoto from "./hero-photo.js";
 import "./hero.css";
 
 function Hero() {
-  const [src, alt] = heroPhoto(1200, 500, -30, "Japan night view");
+  const [src, alt] = heroPhoto(1200, 500, -30, 0, "Japan night view");
   return (
     <div className="hero">
       <img src={src} alt={alt} />
