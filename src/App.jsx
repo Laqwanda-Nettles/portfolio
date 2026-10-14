@@ -13,7 +13,7 @@ function App() {
     <div className="container">
       <Header />
       <Hero />
-      <p>Pokémon trainer from Pallet Town.</p>
+      <h2>What is your Fortune?</h2>
       <Fortune />
       <About />
       <GitHubLink />
